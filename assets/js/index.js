@@ -17,7 +17,7 @@ $(document).ready(function () {
 // Function to animate the counters
 function animateCounter($counter) {
   const target = parseInt($counter.attr("data-target"));
-  const speed = 1000; // Adjust speed for smoother animation
+  const speed = 10000; // Adjust speed for smoother animation
   const increment = target / speed;
 
   const updateCount = () => {
@@ -162,28 +162,37 @@ var swiper = new Swiper(".partnerSlider", {
   spaceBetween: 10,
   loop: true,
   freeMode: true,
-  speed: 5000,
+  speed: 3000,
   freeModeMomentum: false,
-  centeredSlides: true,
   grabCursor: true,
+  // allowTouchMove: false,
   autoplay: {
-		enabled: true,
-		delay: 1,
-		pauseOnMouseEnter: false,
-		disableOnInteraction: true,
-	},
+    enabled: true,
+    delay: 0,
+    pauseOnMouseEnter: false,
+    disableOnInteraction: false,
+  },
   breakpoints: {
     640: {
       slidesPerView: 2,
       spaceBetween: 20,
     },
     768: {
+      slidesPerView: 3,
+      spaceBetween: 30,
+    },
+    1024: {
       slidesPerView: 4,
       spaceBetween: 40,
     },
-    1024: {
+    1200: {
       slidesPerView: 5,
       spaceBetween: 50,
     },
   },
 });
+
+var tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'))
+var tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
+  return new bootstrap.Tooltip(tooltipTriggerEl)
+})
