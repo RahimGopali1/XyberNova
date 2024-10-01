@@ -1,0 +1,34 @@
+.career-section {
+  .career-wrapper {
+    .career-top-img {
+      margin-bottom: 2rem;
+      width: 100%;
+      height: 20rem;
+      img {
+        width: 100%;
+        height: 100%;
+        border-radius: 12px;
+        object-fit: cover;
+        object-position: top;
+      }
+    }
+    ul {
+      li {
+        span {
+          i {
+            color: $primary;
+          }
+        }
+        margin-bottom: 1rem;
+      }
+    }
+    h3 {
+      color: $primary;
+    }
+    .slidebar-wrapper {
+      background-color: $bg-1;
+      padding: 2rem;
+      border-radius: 12px;
+    }
+  }
+}

@@ -38,7 +38,12 @@
           color: $color-white;
           font-size: 14px;
           &:hover {
-            background-color: $color-black;
+            background-color: transparent;
+            color: $primary;
+          }
+          &.active {
+            background-color: transparent;
+            color: $primary;
           }
         }
       }
@@ -159,7 +164,7 @@
       .title-label {
         font-size: 18px;
         margin-bottom: 1.5rem;
-        color: $text-color;
+        color: $primary;
       }
       @keyframes fadeUp {
         0% {
@@ -1015,8 +1020,9 @@
     }
   }
 }
-.copyright-wrapper {
-  .copyright-holder {
+.copyright-holder {
+  .left-content,
+  .right-content {
     a,
     p,
     span {

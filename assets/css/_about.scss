@@ -6,10 +6,11 @@
       flex-wrap: wrap;
       padding: 1rem;
       gap: 0.5rem;
-      background: radial-gradient($primary 50%, $black 100%);
+      background: radial-gradient($primary -10%, $color-black 45%);
       .image-holder {
         width: 46%;
-        height: 12rem;
+        height: 11rem;
+        // border-radius: 12px;
         overflow: hidden;
         img {
           width: 100%;
@@ -21,20 +22,80 @@
         }
         &.image-2 {
           border-radius: 0 12px 0 0;
-          transform: translateY(-1rem);
+          transform: translateY(-0.6rem);
         }
         &.image-3 {
           border-radius: 0 0 0 12px;
         }
         &.image-4 {
           border-radius: 0 0 12px 0;
-          transform: translateY(-1rem);
+          transform: translateY(-0.6rem);
         }
       }
       .main-image {
-        border-radius: 12px 0 12px 0;
+        border-radius: 12px;
         overflow: hidden;
+        width: 100%;
+        height: 21rem;
+        img {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+        }
       }
+    }
+  }
+  @media screen and (max-width: 992px) {
+    .about-hero-card {
+      .about-image {
+        padding: 0;
+      }
+    }
+  }
+  @media screen and (max-width: 767px) {
+    .about-hero-card {
+      .about-image {
+        .image-holder {
+          height: 8rem;
+          &.image-2 {
+            border-radius: 0 12px 0 0;
+            transform: translateY(0);
+          }
+          &.image-4 {
+            border-radius: 0 0 12px 0;
+            transform: translateY(0);
+          }
+        }
+        .main-image {
+          height: 15rem;
+        }
+      }
+    }
+  }
+}
+.join-banner {
+  position: relative;
+  background-image: url("../images/slider2.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  &::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: $bg-1;
+    opacity: 0.9;
+  }
+  .join-desc {
+    position: relative;
+    z-index: 1;
+    text-align: center;
+    p {
+      margin-bottom: 2rem;
+      font-size: 14px;
     }
   }
 }

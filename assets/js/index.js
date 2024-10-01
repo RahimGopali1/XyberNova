@@ -192,7 +192,24 @@ var swiper = new Swiper(".partnerSlider", {
   },
 });
 
-var tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'))
+var tooltipTriggerList = [].slice.call(
+  document.querySelectorAll('[data-bs-toggle="tooltip"]')
+);
 var tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
-  return new bootstrap.Tooltip(tooltipTriggerEl)
-})
+  return new bootstrap.Tooltip(tooltipTriggerEl);
+});
+
+document.getElementById('input-file').addEventListener('change', function(event) {
+  const fileLabel = document.getElementById('file-label');
+  const successIcon = document.querySelector('.file .success');
+  const cloudIcon = document.querySelector('.file .cloud-icon');
+  
+  if (this.files.length > 0) {
+      // Hide the cloud icon and show the success icon
+      successIcon.classList.remove('d-none');
+      cloudIcon.classList.add('d-none');
+
+      // Replace the span text with 'Uploaded'
+      fileLabel.textContent = 'Uploaded';
+  }
+});

@@ -60,16 +60,49 @@ ul {
 }
 
 .btn-main {
+  position: relative;
   background-color: $primary;
   border: none;
   padding: 0.7rem 2rem;
   border-radius: 24px;
-  transition: background-color 0.3s ease;
+  overflow: hidden;
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 0;
+    background-color: $secondary;
+    opacity: 0;
+    transition: 0.3s all ease-in-out;
+  }
+  &::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 0;
+    background-color: $secondary;
+    opacity: 0;
+    transition: 0.3s all ease-in-out;
+  }
   span {
+    position: relative;
+    z-index: 1;
     color: $color-white;
   }
   &:hover {
-    background-color: lighten($bg-1, 10%);
+    background-color: $primary;
+    &::after {
+      height: 50%;
+      opacity: 1;
+    }
+    &::before {
+      height: 50%;
+      opacity: 1;
+    }
   }
 }
 
@@ -89,14 +122,27 @@ ul {
 }
 
 .breadcrumb-wrapper {
+  position: relative;
   background: url("../images/breadcrumb.jpg");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
   margin-bottom: 3rem;
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: $color-black;
+    opacity: 0.4;
+  }
   .breadcrumb-holder {
+    position: relative;
     padding: 10rem 0 5rem 0;
     text-align: center;
+    z-index: 1;
     .page-title {
       h1 {
         font-size: 48px;
