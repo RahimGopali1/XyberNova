@@ -65,16 +65,16 @@
                             </a>
                             <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink2">
                                 <li>
-                                    <a class="dropdown-item" href="#">ERP Systems</a>
+                                    <a class="dropdown-item" href="solution.html">ERP Systems</a>
                                 </li>
                                 <li>
-                                    <a class="dropdown-item" href="#">Web Hosting</a>
+                                    <a class="dropdown-item" href="solution.html">Web Hosting</a>
                                 </li>
                                 <li>
-                                    <a class="dropdown-item" href="#">DevOps</a>
+                                    <a class="dropdown-item" href="solution.html">DevOps</a>
                                 </li>
                                 <li>
-                                    <a class="dropdown-item" href="#">IT Infrastructure</a>
+                                    <a class="dropdown-item" href="solution.html">IT Infrastructure</a>
                                 </li>
                             </ul>
                         </li>
@@ -85,16 +85,16 @@
                             </a>
                             <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink3">
                                 <li>
-                                    <a class="dropdown-item" href="#">Healthcare</a>
+                                    <a class="dropdown-item" href="industry.html">Healthcare</a>
                                 </li>
                                 <li>
-                                    <a class="dropdown-item" href="#">Education</a>
+                                    <a class="dropdown-item" href="industry.html">Education</a>
                                 </li>
                                 <li>
-                                    <a class="dropdown-item" href="#">Finance</a>
+                                    <a class="dropdown-item" href="industry.html">Finance</a>
                                 </li>
                                 <li>
-                                    <a class="dropdown-item" href="#">Retail</a>
+                                    <a class="dropdown-item" href="industry.html">Retail</a>
                                 </li>
                             </ul>
                         </li>
@@ -111,6 +111,77 @@
         </nav>
     </header>
     <main>
+
+        <!-- Modal -->
+        <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+            aria-labelledby="staticBackdropLabel" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered modal-lg">
+                <div class="modal-content">
+                    <div class="modal-header border-0">
+                        <h1 class="modal-title fs-5" id="staticBackdropLabel">Get Code</h1>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <form action="#">
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <div class="mb-3">
+                                        <input type="text" class="form-control" id="firstname"
+                                            placeholder="Full Name *">
+                                    </div>
+                                </div>
+                                <div class="col-md-12">
+                                    <div class="mb-3">
+                                        <input type="email" class="form-control" id="emailID" placeholder="Email *">
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="mb-3">
+                                        <input type="text" class="form-control" id="contact"
+                                            placeholder="Contact no. *">
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="mb-3">
+                                        <select class="form-select" aria-label="Default select example">
+                                            <option selected hidden disabled>Type Of Business</option>
+                                            <option value="1">Marketing</option>
+                                            <option value="2">Cybersecurity</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="mb-3">
+                                        <select class="form-select" aria-label="Default select example">
+                                            <option selected hidden disabled>Type Of Service</option>
+                                            <option value="1">One</option>
+                                            <option value="2">Two</option>
+                                            <option value="3">Three</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="mb-3">
+                                        <input type="text" class="form-control" id="bdgt" placeholder="Budget *">
+                                    </div>
+                                </div>
+                                <div class="col-md-12">
+                                    <div class="mb-3">
+                                        <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"
+                                            placeholder="Message"></textarea>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class=" text-center">
+                                <button type="button" class="btn btn-main"
+                                    data-bs-dismiss="modal"><span>Submit</span></button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Modal end  -->
         <section class="header-section">
             <div class="container">
                 <div class="header-wrapper d-flex flex-column-reverse flex-lg-row align-items-bottom">
@@ -140,7 +211,7 @@
                                 design is an excellent solution for startups, business, personal portfolio, services.
                             </p>
                         </div>
-                        <ul class="social-link d-flex align-items-center flex-wrap">
+                        <ul class="social-link d-flex align-items-center flex-wrap mb-4">
                             <li class=" wow fadeInUp" data-wow-delay="0.3s"
                                 style="visibility: visible; -webkit-animation-delay: 0.3s; -moz-animation-delay: 0.3s; animation-delay: 0.3s;">
                                 <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
@@ -158,6 +229,11 @@
                                 <a href="#"><i class="fa-brands fa-youtube"></i></a>
                             </li>
                         </ul>
+                        <btn class="btn btn-main wow fadeInUp px-5" data-bs-toggle="modal"
+                            data-bs-target="#staticBackdrop" data-wow-delay="0.3s"
+                            style="visibility: visible; -webkit-animation-delay: 0.3s; -moz-animation-delay: 0.3s; animation-delay: 0.3s;">
+                            <span>Get Code</span>
+                        </btn>
                     </div>
                     <div class="header-image mb-4 wow fadeInUp" data-wow-delay="0.3s"
                         style="visibility: visible; -webkit-animation-delay: 0.3s; -moz-animation-delay: 0.3s; animation-delay: 0.3s;">

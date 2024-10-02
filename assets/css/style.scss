@@ -157,7 +157,7 @@
     z-index: 1;
     width: 100%;
     height: 100vh;
-    padding-top: 10rem;
+    padding-top: 11rem;
     .header-desc {
       width: 55%;
       height: auto;
@@ -720,6 +720,7 @@
       .hero-card {
         padding: 1.5rem 0.8rem;
         .icon-wrapper {
+          width: 8rem;
           padding: 0 0.5rem 0 0;
         }
       }

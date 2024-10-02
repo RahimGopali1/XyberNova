@@ -1,0 +1,42 @@
+.solution-section {
+  .solution-wrapper {
+    .solution-main-image {
+      width: 100%;
+      height: 20rem;
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        border-radius: 12px;
+      }
+    }
+    .solution-top-desc {
+      .solution-listing {
+        ul {
+          column-count: 2;
+          li {
+            margin-bottom: 0.7rem;
+            font-size: 14px;
+            i {
+              color: $primary;
+            }
+          }
+        }
+      }
+    }
+  }
+  @media screen and (max-width: 767px) {
+    .solution-wrapper {
+      .solution-top-desc {
+        .solution-listing {
+          ul {
+            column-count: 1;
+            li {
+              margin-bottom: 0.5rem;
+            }
+          }
+        }
+      }
+    }
+  }
+}

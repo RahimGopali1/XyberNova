@@ -42,10 +42,25 @@ ul {
 .section-title-wrapper {
   margin-bottom: 3.5rem;
   .section-label {
+    position: relative;
     font-size: 16px;
     color: $text-color;
     margin-bottom: 1rem;
     text-transform: uppercase;
+    display: inline-block;
+    &::after {
+      content: "";
+      position: absolute;
+      top: 20%;
+      left: 110%;
+      width: 1.5rem;
+      height: 1.5rem;
+      background-image: url("../images/curved-arrow.png");
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: cover;
+      filter: invert(100);
+    }
   }
 
   .section-title {
@@ -159,6 +174,39 @@ ul {
           color: $primary;
           &::before {
             color: $primary;
+          }
+        }
+      }
+    }
+  }
+}
+
+.modal {
+  .modal-dialog {
+    .modal-content {
+      background-color: $bg-1;
+      .modal-header {
+        padding: 1rem 2rem 0 2rem;
+        .btn-close {
+          filter: invert(100);
+          box-shadow: none;
+        }
+      }
+      .modal-body {
+        padding: 2rem;
+        .form-control,
+        .form-select {
+          background-color: $bg-2;
+          border: none;
+          border-radius: 6px;
+          padding: 0.8rem;
+          color: $text-color;
+          box-shadow: #00000029 0px 1px 4px, $text-color 0px 0px 0px 1px;
+          &::placeholder {
+            color: $text-color;
+          }
+          &:focus {
+            box-shadow: #00000029 0px 1px 4px, $primary 0px 0px 0px 2px;
           }
         }
       }

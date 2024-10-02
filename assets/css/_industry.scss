@@ -1,0 +1,51 @@
+.industry-section {
+  .industry-mid-section {
+    margin-bottom: 3.5rem;
+    .mid-image {
+      width: 100%;
+      height: 20rem;
+      img {
+        width: 100%;
+        height: 100%;
+        border-radius: 12px;
+        object-fit: cover;
+      }
+    }
+    .mid-desc {
+      h3 {
+        span {
+          color: $primary;
+        }
+      }
+    }
+  }
+  .accordion {
+    .accordion-item {
+      margin-bottom: 1rem;
+      border: none;
+      .accordion-header {
+        .accordion-button {
+          background-color: $bg-1;
+          color: $color-white;
+          border-radius: 0;
+          box-shadow: none;
+          font-size: 14px;
+          &::after {
+            filter: invert(100);
+          }
+        }
+      }
+      .accordion-collapse {
+        background-color: $color-black;
+        border-left: 2px solid $bg-1;
+        border-right: 2px solid $bg-1;
+        border-bottom: 2px solid $bg-1;
+        border-top: none;
+        border-radius: 0;
+        .accordion-body {
+          font-size: 14px;
+        }
+      }
+    }
+  }
+}
